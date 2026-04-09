@@ -1,74 +1,79 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin } from "lucide-react";
-import { PHONE_1, PHONE_2, EMAIL, ADDRESS, WHATSAPP_URL, CATEGORIES, CITIES } from "@/lib/constants";
+import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
+import { PHONE_1, PHONE_2, EMAIL, ADDRESS } from "@/lib/constants";
 
 const Footer = () => (
-  <footer className="bg-secondary text-secondary-foreground">
+  <footer className="bg-[hsl(175,35%,25%)] text-white">
     <div className="container py-16">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        {/* Logo & About */}
         <div>
-          <div className="flex items-center gap-3 mb-4">
-            <img src="/images/logo.png" alt="RG Trophies" className="h-10 w-auto brightness-200" />
-            <span className="font-heading font-bold text-lg text-primary">RG TROPHIES</span>
+          <div className="inline-flex items-center gap-3 mb-5 bg-white/10 rounded-xl px-5 py-3">
+            <span className="text-3xl">🏆</span>
+            <span className="font-heading font-bold text-xl text-primary">RG Trophies</span>
           </div>
-          <p className="text-sm text-secondary-foreground/70 leading-relaxed">
-            Premium trophy manufacturer specializing in custom awards, medals, and corporate recognition products across India.
+          <p className="text-white/70 text-sm leading-relaxed mb-6">
+            Creating exceptional awards and recognition pieces that celebrate achievements and inspire excellence.
           </p>
+          <div className="flex gap-3">
+            <a href="#" className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors">
+              <Facebook className="w-4 h-4" />
+            </a>
+            <a href="#" className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors">
+              <Instagram className="w-4 h-4" />
+            </a>
+            <a href="#" className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors">
+              <Linkedin className="w-4 h-4" />
+            </a>
+          </div>
         </div>
 
-        <div>
-          <h4 className="font-heading font-semibold text-primary mb-4">Products</h4>
-          <ul className="space-y-2">
-            {CATEGORIES.map((c) => (
-              <li key={c.slug}>
-                <Link to={`/products/${c.slug}`} className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
-                  {c.title}
+        {/* Quick Links */}
+        <div className="text-center">
+          <h4 className="font-heading font-bold text-lg mb-5">Quick Links</h4>
+          <ul className="space-y-3">
+            {[
+              { label: "Home", to: "/" },
+              { label: "About Us", to: "/about" },
+              { label: "Products", to: "/products" },
+              { label: "Gallery", to: "/gallery" },
+              { label: "Contact", to: "/contact" },
+              { label: "Privacy Policy", to: "/privacy" },
+            ].map((link) => (
+              <li key={link.to}>
+                <Link to={link.to} className="text-white/70 hover:text-primary transition-colors text-sm">
+                  {link.label}
                 </Link>
               </li>
             ))}
           </ul>
         </div>
 
+        {/* Contact Info */}
         <div>
-          <h4 className="font-heading font-semibold text-primary mb-4">Service Areas</h4>
-          <ul className="space-y-2">
-            {CITIES.map((city) => (
-              <li key={city.slug}>
-                <Link to={`/trophy-manufacturer-in-${city.slug}`} className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
-                  Trophy Manufacturer in {city.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div>
-          <h4 className="font-heading font-semibold text-primary mb-4">Contact Info</h4>
-          <div className="space-y-3 text-sm text-secondary-foreground/70">
-            <a href={`tel:${PHONE_1}`} className="flex items-start gap-2 hover:text-primary transition-colors">
-              <Phone className="w-4 h-4 mt-0.5 shrink-0" /> +91 {PHONE_1}
+          <h4 className="font-heading font-bold text-lg mb-5">Contact Info</h4>
+          <div className="space-y-4 text-sm">
+            <a href={`tel:${PHONE_1}`} className="flex items-center gap-3 text-white/70 hover:text-primary transition-colors">
+              <Phone className="w-4 h-4 text-primary shrink-0" />
+              {PHONE_1}, {PHONE_2}
             </a>
-            <a href={`tel:${PHONE_2}`} className="flex items-start gap-2 hover:text-primary transition-colors">
-              <Phone className="w-4 h-4 mt-0.5 shrink-0" /> +91 {PHONE_2}
+            <a href={`mailto:${EMAIL}`} className="flex items-center gap-3 text-white/70 hover:text-primary transition-colors">
+              <Mail className="w-4 h-4 text-primary shrink-0" />
+              {EMAIL}
             </a>
-            <a href={`mailto:${EMAIL}`} className="flex items-start gap-2 hover:text-primary transition-colors">
-              <Mail className="w-4 h-4 mt-0.5 shrink-0" /> {EMAIL}
-            </a>
-            <div className="flex items-start gap-2">
-              <MapPin className="w-4 h-4 mt-0.5 shrink-0" /> {ADDRESS}
+            <div className="flex items-start gap-3 text-white/70">
+              <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+              <span>{ADDRESS}</span>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div className="border-t border-secondary-foreground/10">
-      <div className="container py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-secondary-foreground/50">
-        <p>© {new Date().getFullYear()} RG Trophies. All rights reserved.</p>
-        <div className="flex gap-6">
-          <Link to="/about" className="hover:text-primary transition-colors">About</Link>
-          <Link to="/contact" className="hover:text-primary transition-colors">Contact</Link>
-          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">WhatsApp</a>
-        </div>
+
+    {/* Bottom Bar */}
+    <div className="border-t border-white/10">
+      <div className="container py-5 text-center text-sm text-white/50">
+        © {new Date().getFullYear()} RG Trophies. All rights reserved.
       </div>
     </div>
   </footer>
