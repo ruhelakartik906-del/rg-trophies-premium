@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 
 const navItems = [
   { label: "Home", path: "/" },
@@ -13,23 +14,36 @@ const navItems = [
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const { pathname } = useLocation();
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (v) => setScrolled(v > 50));
 
   return (
-    <header className="bg-background/95 backdrop-blur-md sticky top-0 z-50 border-b border-border shadow-sm">
-      <div className="container flex items-center justify-between py-4">
+    <motion.header
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-background/95 backdrop-blur-md shadow-lg border-b border-border"
+          : "bg-background/80 backdrop-blur-sm"
+      }`}
+    >
+      <div className="container flex items-center justify-between py-3">
         <Link to="/" className="flex items-center gap-3">
           <img src="/images/logo.png" alt="RG Trophies" className="h-12 w-auto" />
-          <span className="font-heading font-bold text-xl text-primary">RG TROPHIES</span>
+          <div>
+            <span className="font-heading font-bold text-xl text-primary block leading-tight">RG TROPHIES</span>
+            <span className="text-[10px] text-muted-foreground font-heading tracking-wider uppercase">Premium Awards</span>
+          </div>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-8">
           {navItems.map((item) => (
             <Link
               key={item.path}
               to={item.path}
-              className={`font-heading font-medium text-sm transition-colors hover:text-primary ${
-                pathname === item.path ? "text-primary" : "text-foreground"
+              className={`font-heading font-medium text-sm transition-colors hover:text-primary relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-primary after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:origin-left ${
+                pathname === item.path ? "text-primary after:scale-x-100" : "text-foreground"
               }`}
             >
               {item.label}
@@ -37,14 +51,14 @@ const Header = () => {
           ))}
           <Link
             to="/contact"
-            className="bg-primary text-primary-foreground px-6 py-2.5 rounded-full font-heading font-semibold text-sm hover:bg-gold-dark transition-colors"
+            className="bg-primary text-primary-foreground px-6 py-2.5 rounded-full font-heading font-semibold text-sm hover:bg-gold-dark transition-all hover:scale-105"
           >
-            Get in Touch
+            Get Quote
           </Link>
         </nav>
 
         <button
-          className="md:hidden p-2 text-foreground"
+          className="lg:hidden p-2 text-foreground"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -53,7 +67,11 @@ const Header = () => {
       </div>
 
       {open && (
-        <nav className="md:hidden bg-background border-t border-border animate-fade-in">
+        <motion.nav
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="lg:hidden bg-background border-t border-border"
+        >
           <div className="container py-4 flex flex-col gap-3">
             {navItems.map((item) => (
               <Link
@@ -72,12 +90,12 @@ const Header = () => {
               onClick={() => setOpen(false)}
               className="bg-primary text-primary-foreground px-6 py-2.5 rounded-full font-heading font-semibold text-sm text-center hover:bg-gold-dark transition-colors mt-2"
             >
-              Get in Touch
+              Get Quote
             </Link>
           </div>
-        </nav>
+        </motion.nav>
       )}
-    </header>
+    </motion.header>
   );
 };
 
