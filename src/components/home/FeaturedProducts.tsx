@@ -6,10 +6,7 @@ import { CATEGORIES, WHATSAPP_URL } from "@/lib/constants";
 import { categoryImages } from "@/lib/images";
 import AnimatedSection from "@/components/AnimatedSection";
 
-const products = [
-  ...CATEGORIES.map((c) => ({ title: c.title, slug: c.slug, image: categoryImages[c.slug] })),
-  ...CATEGORIES.slice(0, 3).map((c) => ({ title: `Premium ${c.title}`, slug: c.slug, image: categoryImages[c.slug] })),
-];
+const products = CATEGORIES.map((c) => ({ title: c.title, slug: c.slug, image: categoryImages[c.slug], material: c.material }));
 
 const FeaturedProducts = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" });
@@ -41,9 +38,9 @@ const FeaturedProducts = () => {
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex -ml-5">
             {products.map((product, i) => (
-              <div key={i} className="min-w-0 shrink-0 grow-0 basis-full sm:basis-1/2 lg:basis-1/4 pl-5">
+              <div key={i} className="min-w-0 shrink-0 grow-0 basis-full sm:basis-1/2 lg:basis-1/3 pl-5">
                 <div className="group bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
-                  <div className="aspect-square overflow-hidden relative">
+                  <div className="aspect-[4/3] overflow-hidden relative">
                     <img src={product.image} alt={product.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                     <div className="absolute inset-0 bg-secondary/0 group-hover:bg-secondary/40 transition-colors flex items-center justify-center">
                       <a
@@ -56,9 +53,10 @@ const FeaturedProducts = () => {
                       </a>
                     </div>
                   </div>
-                  <div className="p-4 text-center">
-                    <h3 className="font-heading font-semibold text-foreground">{product.title}</h3>
-                    <Link to={`/products/${product.slug}`} className="text-primary text-sm font-medium hover:underline">
+                  <div className="p-5">
+                    <h3 className="font-heading font-semibold text-foreground text-lg mb-1">{product.title}</h3>
+                    <p className="text-muted-foreground text-xs mb-3">{product.material}</p>
+                    <Link to={`/products/${product.slug}`} className="text-primary text-sm font-heading font-medium hover:underline">
                       View Details →
                     </Link>
                   </div>
