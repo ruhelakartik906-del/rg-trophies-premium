@@ -9,7 +9,7 @@ const Footer = () => (
         {/* Logo & About */}
         <div>
           <div className="inline-flex items-center gap-3 mb-5 bg-white/10 rounded-xl px-5 py-3">
-            <span className="text-3xl">🏆</span>
+            <img src="/images/logo.png" alt="Xpert Awards" className="h-10 w-auto" />
             <span className="font-heading font-bold text-xl text-primary">Xpert Awards</span>
           </div>
           <p className="text-white/70 text-sm leading-relaxed mb-6">
