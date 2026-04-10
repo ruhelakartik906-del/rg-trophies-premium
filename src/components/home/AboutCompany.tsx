@@ -16,10 +16,10 @@ const AboutCompany = () => (
         <AnimatedSection direction="left">
           <span className="text-primary font-heading font-medium text-sm uppercase tracking-widest mb-4 block">About Us</span>
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-6">
-            About <span className="text-primary">RG Trophies</span>
+            About <span className="text-primary">Xpert Awards</span>
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            At RG Trophies, we specialize in designing and manufacturing high-quality awards, trophies, medals, and corporate gifts. With years of experience, we deliver premium recognition products to schools, colleges, corporate companies, sports events, and government organizations across India.
+            At Xpert Awards, we specialize in designing and manufacturing high-quality awards, trophies, medals, and corporate gifts. With years of experience, we deliver premium recognition products to schools, colleges, corporate companies, sports events, and government organizations across India.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-8">
             Our commitment to quality craftsmanship and attention to detail has made us a trusted name among organizations seeking exceptional recognition solutions.

@@ -1,8 +1,8 @@
-export const PHONE_1 = "9953551576";
+export const PHONE_1 = "9310651066";
 export const PHONE_2 = "9315879315";
-export const EMAIL = "rgtrophies24@gmail.com";
-export const WHATSAPP_URL = `https://wa.me/91${PHONE_1}?text=Hi%20RG%20Trophies%2C%20I%20am%20interested%20in%20your%20products.`;
-export const ADDRESS = "Shop No.2 BE-381, Gali No.7, Hari Nagar, New Delhi-110064";
+export const EMAIL = "xpertawards23@gmail.com";
+export const WHATSAPP_URL = `https://wa.me/91${PHONE_1}?text=Hi%20Xpert%20Awards%2C%20I%20am%20interested%20in%20your%20products.`;
+export const ADDRESS = "Shop No. - 2/73, GF, Lalita Park, Laxmi Nagar, New Delhi - 110092";
 
 export const CATEGORIES = [
   {

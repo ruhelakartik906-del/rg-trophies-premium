@@ -9,7 +9,7 @@ const testimonials = [
     name: "Rajesh Sharma",
     role: "Principal, DPS School",
     rating: 5,
-    text: "RG Trophies ne humare Annual Sports Day ke liye 200+ trophies deliver ki. Quality aur design dono outstanding the. Highly recommended!",
+    text: "Xpert Awards ne humare Annual Sports Day ke liye 200+ trophies deliver ki. Quality aur design dono outstanding the. Highly recommended!",
   },
   {
     name: "Priya Mehta",
@@ -21,7 +21,7 @@ const testimonials = [
     name: "Amit Verma",
     role: "Sports Coordinator, Delhi University",
     rating: 5,
-    text: "Best trophy manufacturer in Delhi! We have been ordering from RG Trophies for 3 years now. Consistent quality and great pricing for bulk orders.",
+    text: "Best trophy manufacturer in Delhi! We have been ordering from Xpert Awards for 3 years now. Consistent quality and great pricing for bulk orders.",
   },
   {
     name: "Sunita Gupta",

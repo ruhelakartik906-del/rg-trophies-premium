@@ -7,7 +7,7 @@ const AboutPage = () => (
     <section className="py-20 bg-gradient-dark text-secondary-foreground">
       <div className="container text-center">
         <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4">
-          About <span className="text-primary">RG Trophies</span>
+          About <span className="text-primary">Xpert Awards</span>
         </h1>
         <p className="text-secondary-foreground/70 max-w-2xl mx-auto">
           India's trusted premium trophy manufacturer since over a decade
@@ -21,7 +21,7 @@ const AboutPage = () => (
           <div>
             <h2 className="font-heading text-3xl font-bold text-foreground mb-6">Who We Are</h2>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              RG Trophies is a premium trophy manufacturer specializing in custom awards, medals, and corporate recognition products. We serve schools, sports events, and corporate clients across India.
+              Xpert Awards is a premium trophy manufacturer specializing in custom awards, medals, and corporate recognition products. We serve schools, sports events, and corporate clients across India.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-8">
               With over a decade of experience, we have delivered thousands of trophies and awards to satisfied clients. Our commitment to quality, innovation, and customer satisfaction sets us apart in the industry.

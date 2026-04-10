@@ -16,7 +16,7 @@ const WhyChooseUs = () => (
         <div className="text-center mb-16">
           <span className="text-primary font-heading font-medium text-sm uppercase tracking-widest mb-3 block">Why Us</span>
           <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
-            Why Choose <span className="text-primary">RG Trophies</span>
+            Why Choose <span className="text-primary">Xpert Awards</span>
           </h2>
           <p className="text-secondary-foreground/60 max-w-2xl mx-auto">Delivering excellence in every award we craft</p>
         </div>

@@ -31,7 +31,7 @@ const VideoSection = () => {
           <div className="max-w-4xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-2xl">
             <iframe
               src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
-              title="RG Trophies Manufacturing"
+              title="Xpert Awards Manufacturing"
               allow="autoplay; encrypted-media"
               allowFullScreen
               className="w-full h-full"

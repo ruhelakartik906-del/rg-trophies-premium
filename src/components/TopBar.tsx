@@ -16,7 +16,7 @@ const TopBar = () => (
         </a>
       </div>
       <div className="flex items-center gap-4">
-        <span className="text-primary font-heading font-medium">Custom Trophy Manufacturer</span>
+        <span className="text-primary font-heading font-medium">Custom Trophy & Awards Manufacturer</span>
         <a
           href={WHATSAPP_URL}
           target="_blank"

@@ -30,9 +30,9 @@ const Header = () => {
     >
       <div className="container flex items-center justify-between py-3">
         <Link to="/" className="flex items-center gap-3">
-          <img src="/images/logo.png" alt="RG Trophies" className="h-12 w-auto" />
+          <img src="/images/logo.png" alt="Xpert Awards" className="h-12 w-auto" />
           <div>
-            <span className="font-heading font-bold text-xl text-primary block leading-tight">RG TROPHIES</span>
+            <span className="font-heading font-bold text-xl text-primary block leading-tight">XPERT AWARDS</span>
             <span className="text-[10px] text-muted-foreground font-heading tracking-wider uppercase">Premium Awards</span>
           </div>
         </Link>
