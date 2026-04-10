@@ -10,7 +10,7 @@ const Footer = () => (
         <div>
           <div className="inline-flex items-center gap-3 mb-5 bg-white/10 rounded-xl px-5 py-3">
             <span className="text-3xl">🏆</span>
-            <span className="font-heading font-bold text-xl text-primary">RG Trophies</span>
+            <span className="font-heading font-bold text-xl text-primary">Xpert Awards</span>
           </div>
           <p className="text-white/70 text-sm leading-relaxed mb-6">
             Creating exceptional awards and recognition pieces that celebrate achievements and inspire excellence.
@@ -73,7 +73,7 @@ const Footer = () => (
     {/* Bottom Bar */}
     <div className="border-t border-white/10">
       <div className="container py-5 text-center text-sm text-white/50">
-        © {new Date().getFullYear()} RG Trophies. All rights reserved.
+        © {new Date().getFullYear()} Xpert Awards. All rights reserved.
       </div>
     </div>
   </footer>

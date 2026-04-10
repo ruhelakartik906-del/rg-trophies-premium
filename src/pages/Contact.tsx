@@ -94,7 +94,7 @@ const ContactPage = () => {
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
-                  title="RG Trophies Location"
+                  title="Xpert Awards Location"
                 />
               </div>
             </div>

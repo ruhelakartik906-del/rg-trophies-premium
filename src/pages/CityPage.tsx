@@ -36,7 +36,7 @@ const CityPage = () => {
           <div className="max-w-3xl mx-auto mb-16">
             <h2 className="font-heading text-2xl font-bold text-foreground mb-6">Best Trophy Manufacturer in {cityData.name}</h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              RG Trophies is a leading trophy manufacturer serving {cityData.name} and surrounding areas. We specialize in custom trophies, corporate awards, sports medals, and recognition products for schools, colleges, corporate companies, and government events.
+              Xpert Awards is a leading trophy manufacturer serving {cityData.name} and surrounding areas. We specialize in custom trophies, corporate awards, sports medals, and recognition products for schools, colleges, corporate companies, and government events.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Whether you need wooden trophies, acrylic awards, fiber trophies, or metal cups for your event in {cityData.name}, we deliver premium quality products at affordable prices with fast delivery.
