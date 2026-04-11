@@ -3,7 +3,7 @@ import { categoryImages } from "@/lib/images";
 import AnimatedSection from "@/components/AnimatedSection";
 
 const stats = [
-  { icon: Clock, label: "Years Experience", value: "10+" },
+  { icon: Clock, label: "Years Experience", value: "18+" },
   { icon: Shield, label: "Premium Quality", value: "100%" },
   { icon: Palette, label: "Custom Design", value: "Unlimited" },
   { icon: Truck, label: "Fast Delivery", value: "Pan India" },

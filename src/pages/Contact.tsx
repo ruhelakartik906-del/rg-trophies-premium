@@ -88,7 +88,7 @@ const ContactPage = () => {
               </a>
               <div className="rounded-xl overflow-hidden shadow-lg">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.3!2d77.1!3d28.63!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM4JzA0LjAiTiA3N8KwMDYnMDAuMCJF!5e0!3m2!1sen!2sin!4v1600000000000"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.5!2d77.2753!3d28.6308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce35a6f8ccf37%3A0x7f1b7c8e8c8c8c8c!2sJ7HF%2BQRP%20Delhi!5e0!3m2!1sen!2sin!4v1700000000000"
                   width="100%"
                   height="300"
                   style={{ border: 0 }}
