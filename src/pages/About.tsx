@@ -28,7 +28,7 @@ const AboutPage = () => (
             </p>
             <div className="grid grid-cols-2 gap-6">
               {[
-                { icon: Clock, value: "10+", label: "Years Experience" },
+                { icon: Clock, value: "18+", label: "Years Experience" },
                 { icon: Shield, value: "5000+", label: "Trophies Delivered" },
                 { icon: Palette, value: "500+", label: "Happy Clients" },
                 { icon: Truck, value: "Pan India", label: "Delivery" },
